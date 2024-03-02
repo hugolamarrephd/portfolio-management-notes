@@ -4,16 +4,21 @@ tags:
 ---
 # Conventions
 Convention for quotes, the number of "measurement" currency per "quoted" currency is given by
+
 $$
 S = \text{quoted} : \text{measurement} = q:m
 $$
+
 $$
 S = \text{measurement}/\text{quoted} = m/q
 $$
+
 Note also that
+
 $$
 a:b = \frac{1}{b:a}
 $$
+
 * *The quoted currency is what an investor buys (at the ask price) or sells (at the bid price).
 * The measurement currency is what is used to "settle" the transaction
 
@@ -22,36 +27,49 @@ For example, if two parties exchange 1.33 CAD  for 1 USD, we have
 * CAD:USD = 1/1.33 = 0.75
 * 1.33 CAD/USD
 * 1/1.33 = 0.75 USD/CAD
+
 # Changes in Exchange Rates
 A "quoted" currency *depreciates* relative to a "measurement" currency if 
+
 $$
 \text{quoted} : \text{measurement} \downarrow
 $$
+
 or equivalently
+
 $$
 \text{measurement}/\text{quoted} \downarrow
 $$
+
 For example, CAD *depreciates* relative to USD if 
 * CAD:USD *decreases*
 * or equivalently USD/CAD *decreases*
 
 When computing period rates of appreciation, the rate will depend on the "direction" of the quotation. In particular,
+
 $$
 \frac{S(t+1, a:b) - S(t, a:b)}{S(t, a:b)} \neq \frac{S(t+1, b:a) - S(t,b:a)}{S(t,b:a)}
 $$
+
 In fact, we have
+
 $$
 \frac{S(t+1, b:a) - S(t,b:a)}{S(t,b:a)} =\frac{S(t+1, a:b)^{-1} - S(t, a:b)^{-1}}{S(t, a:b)^{-1}} = \frac{S(t,a:b)-S(t+1,a:b)}{S(t+1,a:b)}
 $$
+
 Note that this is not an issue if we use *continuously compounded rates of change* as 
+
 $$
 \log S(t+1, a:b) - \log S(t, a:b) = \log S(t, a:b)^{-1} - \log S(t+1,a:b)^{-1} = \log S(t,b:a) - \log S(t+1,b:a)
 $$
+
 # Direct Quotes
 A *direct* quote is one for which the foreign currency is quoted:
+
 $$
 \text{foreign} : \text{domestic}
 $$
+
 For example, USD:CAD = 1.33 means that we must pay 1.33CAD to purchase 1USD.
 On the contrary, the *indirect* quote CAD:USD = 0.75 tells us how much USD we can get for 1CAD.
 
@@ -61,13 +79,17 @@ On the contrary, the *indirect* quote CAD:USD = 0.75 tells us how much USD we ca
 # Cross-Rates
 
 By basic arithmetic rules, we have
+
 $$
 a:c = a:b \times b:c
 $$
+
 since $c/a = b/a \times c/b$ by definition of $:$, and
+
 $$
 a: c = {b:c} \div {b:a}
 $$
+
 or since $c/a = {c/b} \div {a/b}$ by definition of $:$.
 
 # Forex Market
@@ -129,6 +151,7 @@ By [cross-rates rules](#cross-rates), the direct quote is AUD:CAD = USD:CAD $\di
 * Maximum AUD:CAD ask = USD:CAD ask $\div$ EUR:USD **bid** = 1.34 $\div$ 1.53 = 0.88CAD
 
 A Canadian investor would thus pay the (highest) ask price of 0.88CAD per AUD.
+
 ## Triangular Arbitrage
 
 If a bank provides a EUR:CAD quote outside of the (cross-rate) quote available on the forex market, there is an arbitrage opportunity.
